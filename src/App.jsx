@@ -4,6 +4,7 @@ import Products from './components/products'
 import Gallery from './components/gallery'
 import Info from './components/info'
 import Categories from './components/categories'
+import Card from './components/card'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Gallery />
       <Info />
       <Categories />
+      <Card />
     </>
   )
 }
