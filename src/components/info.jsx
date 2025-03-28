@@ -10,8 +10,8 @@ export default function Info() {
                     <p className='text-[16px] md:text-2xl font-thin text-[#EAE8E4]'>Lorem ipsum dolor sit amet consectetur. Semper orci adipiscing faucibus sit scelerisque quis commodo aenean viverra</p>
                 </div>
                 <div className='flex flex-col gap-2'>
-                    <img src={img1} alt="" className='h-full w-[264px] md:h-16'/>
-                    <img src={img2} alt="" className='md:h-16'/>
+                    <img src={img1} alt="" className='h-full w-[264px] md:w-[300px] md:h-16 bg-transparent'/>
+                    <img src={img2} alt="" className='h-full w-[264px] md:w-[300px] md:h-16 bg-transparent'/>
                 </div>
             </div>
         </div>
