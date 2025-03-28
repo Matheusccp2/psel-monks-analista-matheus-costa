@@ -5,10 +5,7 @@ function App() {
 
   return (
     <>
-<<<<<<< Updated upstream
-=======
       <Header />
->>>>>>> Stashed changes
       
     </>
   )
