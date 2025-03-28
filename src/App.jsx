@@ -3,6 +3,7 @@ import Header from './components/header'
 import Products from './components/products'
 import Gallery from './components/gallery'
 import Info from './components/info'
+import Categories from './components/categories'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <Products />
       <Gallery />
       <Info />
+      <Categories />
     </>
   )
 }
