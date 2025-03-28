@@ -1,13 +1,13 @@
 import './App.css'
 import Header from './components/header'
-import CardsSection from './components/teste'
+import Products from './components/products'
 
 function App() {
 
   return (
     <>
       <Header />
-      <CardsSection />
+      <Products />
     </>
   )
 }
