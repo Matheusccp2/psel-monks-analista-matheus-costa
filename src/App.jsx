@@ -5,6 +5,7 @@ import Gallery from './components/gallery'
 import Info from './components/info'
 import Categories from './components/categories'
 import Card from './components/card'
+import Formulario from './components/formulario'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Info />
       <Categories />
       <Card />
+      <Formulario />
     </>
   )
 }
