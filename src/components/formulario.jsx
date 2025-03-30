@@ -59,7 +59,7 @@ export default function Formulario() {
                 {/* Botão de Envio */}
                 <button
                     onClick={handleCheck}
-                    className="w-full md:ml-75 md:w-[180px] bg-[#DFBBFE] opacity-50 mt-6 py-2 rounded-md text-[#2D2D2D] font-semibold"
+                    className="w-full md:ml-75 md:w-[180px] bg-[#DFBBFE] opacity-50 mt-6 py-2 rounded-md text-[#2D2D2D] font-semibold hover:bg-purple-600"
                 >
                     Lorem ipsum
                 </button>
