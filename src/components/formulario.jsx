@@ -20,20 +20,38 @@ export default function Formulario() {
   }, []);
 
   // Função para verificar o resultado
-  const handleCheck = () => {
-    // Verifica se todos os campos estão preenchidos
+  const handleCheck = async () => {
     if (!campo1 || !campo2 || !campo3 || !campo4 || !resultado) {
       alert("Por favor, preencha todos os campos obrigatórios.");
       return;
     }
-
-    // Verifica a soma da verificação de segurança
-    if (parseInt(resultado) === num1 + num2) {
-      alert("Verificação correta! Formulário enviado.");
-    } else {
+  
+    if (parseInt(resultado) !== num1 + num2) {
       alert("Resposta incorreta. Tente novamente.");
+      return;
     }
+  
+    const formData = new FormData();
+    formData.append("action", "salvar_dados_formulario"); // Nome da ação do WP
+    formData.append("categoria1", campo1);
+    formData.append("categoria2", campo2);
+    formData.append("categoria3", campo3);
+    formData.append("categoria4", campo4);
+    formData.append("resultado", resultado);
+  
+    try {
+      const response = await fetch("http://psel-monks-analista.local/wp-admin/admin-ajax.php", {
+        method: "POST",
+        body: formData,
+      });
+  
+      const data = await response.json();
+      alert(data.message);
+    } catch (err) {
+        console.error("Erro ao processar a verificação:", err);
+      }
   };
+  
 
   return (
     <div className="flex flex-col md:flex-row justify-center gap-10 bg-[#2D2D2D] p-12">
@@ -92,12 +110,14 @@ export default function Formulario() {
                 </div>
                 <span className="text-lg">=</span>
                 <input
-                type="text"
-                placeholder="*Resultado"
-                value={resultado}
-                onChange={(e) => setResultado(e.target.value)}
-                className="w-[95px] md:w-[234px] p-2 rounded-md bg-white text-center font-bold"
+                    type="number"
+                    placeholder="*Resultado"
+                    value={resultado}
+                    onChange={(e) => setResultado(e.target.value)}
+                    className="w-[95px] md:w-[234px] p-2 rounded-md bg-white text-center font-bold"
                 />
+
+
             </div>
             </div>
 
