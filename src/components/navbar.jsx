@@ -7,7 +7,7 @@ export default function Navbar() {
   const [menuAberto, setMenuAberto] = useState(false);
 
   return (
-    <nav className="bg-[#2D2D2D] p-4 flex items-center">
+    <nav className="bg-[#2D2D2D] p-4 inline-flex items-center">
         {/* Logo + Ícone do menu-hambúrguer */}
         <div className="flex items-center gap-4 ">
             <img src={logo} alt="Logo" className="w-[93.33px] h-[16px] md:w-[140px] md:h-[24px]" />
@@ -18,10 +18,10 @@ export default function Navbar() {
 
         {/* Menu Desktop */}
         <div className="hidden md:flex gap-6 ml-10">
-            <p className="text-[#EAE8E4] text-xl hover:text-gray-300">Categoria 1</p>
-            <p className="text-[#EAE8E4] text-xl hover:text-gray-300">Categoria 2</p>
-            <p className="text-[#EAE8E4] text-xl hover:text-gray-300">Categoria 3</p>
-            <p className="text-[#EAE8E4] text-xl hover:text-gray-300">Categoria 4</p>
+            <p className="text-[#EAE8E4] text-xl hover:text-gray-300 hover:cursor-pointer">Categoria 1</p>
+            <p className="text-[#EAE8E4] text-xl hover:text-gray-300 hover:cursor-pointer">Categoria 2</p>
+            <p className="text-[#EAE8E4] text-xl hover:text-gray-300 hover:cursor-pointer">Categoria 3</p>
+            <p className="text-[#EAE8E4] text-xl hover:text-gray-300 hover:cursor-pointer">Categoria 4</p>
         </div>
 
         {/* Menu Mobile */}
