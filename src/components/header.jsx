@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar from "./navbar";
 import bgImage1 from "../assets/img-banner1.svg"; // Imagem principal
 import bgImage2 from "../assets/img-banner2.svg"; // Imagem deslocada
 import imgScroll from "../assets/scroll.svg";
@@ -6,7 +6,7 @@ import imgScroll from "../assets/scroll.svg";
 export default function Header() {
   return (
     <header className="relative bg-[#2D2D2D] h-[450px] md:h-[480px] flex flex-col overflow-hidden md:rounded-b-[32px]">
-        <div className="relative z-10"> {/* Adicionando z-10 para garantir que o conteúdo fique na frente */}
+        <div className="relative z-10">
             <Navbar />
             <div className="flex flex-col gap-[24px] md:gap-[37px] w-[236px] md:mx-[80px] md:w-[700px]">
                 <div className="ml-[24px] w-[180px] md:w-full">
@@ -19,16 +19,13 @@ export default function Header() {
             </div>
         </div>
 
-        {/* Container das imagens */}
-        <div className="absolute inset-0 flex justify-end md:right-[-10px] right-[-190px] z-0"> {/* Definindo z-0 para as imagens ficarem atrás */}
-            {/* Primeira Imagem */}
+        
+        <div className="absolute inset-0 flex justify-end md:right-[-10px] right-[-190px] z-0">
             <img 
                 src={bgImage1} 
                 alt="Imagem de fundo 1"
                 className="absolute right-0 top-0 w-auto h-full opacity-50"
             />
-
-            {/* Segunda Imagem (Deslocada) */}
             <img 
                 src={bgImage2} 
                 alt="Imagem de fundo 2"

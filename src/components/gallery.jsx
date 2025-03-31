@@ -12,7 +12,7 @@ export default function Gallery() {
                 </div>
                 <img src={img1} alt="" className=''/>
             </div>
-            <div class="flex flex-col w-full md:w-1/2 gap-[8px]">
+            <div className="flex flex-col w-full md:w-1/2 gap-[8px]">
                 <img src={img2} alt="" />
                 <img src={img3} alt="" />
             </div>

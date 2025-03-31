@@ -32,9 +32,7 @@ export default function Products() {
   return (
     <div className="p-8 px-6 md:px-20 md:pt-16 md:pb-8">
       <h2 className="text-3xl md:text-5xl font-bold mb-4">Lorem ipsum dolor sit amet consectetur</h2>
-      <p className="text-base md:text-2xl text-gray-600 mb-6">
-        Lorem ipsum dolor sit amet consectetur. Semper orci adipiscing faucibus sit scelerisque quis commodo
-      </p>
+      <p className="text-base md:text-2xl text-gray-600 mb-6">Lorem ipsum dolor sit amet consectetur. Semper orci adipiscing faucibus sit scelerisque quis commodo</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {products.map((product) => (
           <div key={product.id || product.title.rendered} className="p-2 rounded-lg shadow-md bg-white">
